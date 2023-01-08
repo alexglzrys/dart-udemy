@@ -66,4 +66,31 @@ void main() {
   if (estudia != null) {
     print(estudia);
   }
+
+  // * Listas
+
+  // Las listas en Dart son equivalentes a los arreglos en otros lenguajes de programación
+  // Pueden ser de un solo tipo de dato, o de tipo genérico (Object).
+  // En Dart todo es un objeto
+  // Las listas son base 0
+
+  List<String> heroes = [
+    'Goku',
+    'Superman',
+    'Batman',
+    'Iron Man',
+    'Hombre Araña'
+  ];
+  List<Object> generico = [
+    'Lunes',
+    true,
+    511,
+    ['Vegueta', 'Trunks'],
+    false,
+    48.512
+  ];
+  print(heroes);
+  print(generico);
+  print(
+      'Mi heroe favorito es ${heroes[0]}, y mi villano es ${(generico[3] as List)[0]}');
 }

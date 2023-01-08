@@ -43,4 +43,27 @@ void main() {
   print(marca);
   print(tyc);
   print(raw);
+
+  // * Booleanos
+
+  bool estaLogeado = true;
+  bool esAdmin = false;
+  bool? estudia;
+
+  print(estaLogeado);
+  print(!esAdmin);
+
+  /**
+   * 
+   * En Dart el símbolo ! tiene dos significados
+   * En boolenos como corto circuito, es decir la negación tradicional (!variable)
+   * Para especificar a Dart que confie en nosotros, pues la variable contiene un valor en ese punto (variable!). Generalmente se les vé en propiedades de objetos o mapas
+   * 
+   */
+
+  // Null Saflty
+  // Para comparar si una variable es o no nula, se debe comparar explicitamente
+  if (estudia != null) {
+    print(estudia);
+  }
 }

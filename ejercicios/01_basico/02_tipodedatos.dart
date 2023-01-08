@@ -93,4 +93,40 @@ void main() {
   print(generico);
   print(
       'Mi heroe favorito es ${heroes[0]}, y mi villano es ${(generico[3] as List)[0]}');
+
+  // * Sets
+  // Comparten la mayoría de los métodos de las listas
+  // Su principal diferencia es que su contenido no se puede repetir
+
+  Set<String> villanos = {
+    'Vegueta',
+    'Napa',
+    'Radix',
+    'Frezeer',
+    'Dodoria',
+    'Saabon'
+  };
+
+  print(villanos);
+
+  villanos.add('Giniu');
+  villanos.add('Androide 15');
+  villanos.add('Dodoria');
+  villanos.add('Napa');
+
+  print(villanos);
+
+  List<String> lenguajes = [
+    'PHP',
+    'JavaScript',
+    'Dart',
+    'HTML',
+    'PHP',
+    'CSS',
+    'Dart',
+    'Java'
+  ];
+  print(lenguajes);
+  // Convertir una lista a un conjunto. Esto ayuda a retirar todo el contenido duplicado
+  print(lenguajes.toSet());
 }

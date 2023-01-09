@@ -129,4 +129,24 @@ void main() {
   print(lenguajes);
   // Convertir una lista a un conjunto. Esto ayuda a retirar todo el contenido duplicado
   print(lenguajes.toSet());
+
+  // * Mapas
+  // Los mapas son equivalentes a los diccionarios u objetos literales en otros lenguajes de programación
+  // Map<tipo_dato_llave, tipo_dato_valor>
+
+  Map<String, dynamic> ironman = {
+    'nombre': 'Tony Stark',
+    'poder': 'Inteligencia y dinero',
+    'nivel': 9000,
+  };
+
+  Map<String, dynamic> capitan = new Map();
+  capitan.addAll({'nombre': 'Goku', 'poder': 'Super Sayayin', 'nivel': 75000});
+  //capitan.addAll(ironman);
+
+  // Acceder a valores de propiedades
+  print('Iron Man en realidad es el Sr. ${ironman['nombres']}');
+
+  print(ironman);
+  print(capitan);
 }

@@ -10,5 +10,11 @@ void main() {
     ..nombre = 'Alejandro'
     ..edad = 37;
 
+  // Asignar un valor a una propiedad privada mediante un setter
+  persona.bio = 'Programador Web FullStack';
+
+  // Obtener el valor de una propiedad privada mediante un getter
+  print(persona.bio);
+
   print(persona);
 }

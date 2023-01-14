@@ -8,8 +8,7 @@ void main() {
   // Usar el operador en cascada para asignar valor a sus propiedades
   persona
     ..nombre = 'Alejandro'
-    ..edad = 37
-    ..bio = 'Programador Web';
+    ..edad = 37;
 
   print(persona);
 }

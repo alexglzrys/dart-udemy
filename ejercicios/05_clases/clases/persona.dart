@@ -46,6 +46,17 @@ class Persona {
   // Constructor básico con paso de parámetros por nombre obligatorios
   Persona({required this.edad, required this.nombre});
 
+  // ? Constructores con nombre
+  // Permiten simular a la sobrecarga de constructores presentes en lenguajes como JAVA
+  // En Dart se usa bastante en patrones Singleton
+  Persona.tecnologia({required this.nombre, this.edad = 30}) {
+    _bio = 'Tecnologo';
+  }
+  Persona.sinior({required this.nombre}) {
+    edad = 40;
+    _bio = 'Experto en lo que hace';
+  }
+
   // * Métodos
   // Método que se ejecuta automáticamente cuando se imprime directametne una instancia de esta clase
   @override

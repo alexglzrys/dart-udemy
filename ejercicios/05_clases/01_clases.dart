@@ -8,6 +8,10 @@ void main() {
   //final persona = new Persona(edad: 35);
   final persona = new Persona(edad: 35, nombre: 'Junior');
 
+  // Usar constructores con nombre para generar instancias de clase
+  final persona2 = new Persona.tecnologia(nombre: 'Juana');
+  final persona3 = new Persona.sinior(nombre: 'Valeria');
+
   // Usar el operador en cascada para asignar valor a sus propiedades
   /*persona
     ..nombre = 'Alejandro'
@@ -21,4 +25,6 @@ void main() {
   print(persona.bio);
 
   print(persona);
+  print(persona2);
+  print(persona3);
 }

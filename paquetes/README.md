@@ -25,3 +25,18 @@ dart bin/nombre_app.dart
 - Seleccionar el archivo que contiene la **función main**  
 - Presionar la tecla **F5**
 - Mediante la barra con acciones de depuración, ir avanzando paso a paso y ver los valores actuales en el panel de depuración hasta lograr identificar el error.
+
+## Instalar paquetes de terceros en Dart
+
+- Ir al sitio del **repositorios de paquetes Dart** en **https://pub.dev/**
+- Buscar el paquete
+- Verificar que sea compatible con nuestro desarrollo: **Compatible con Flutter, Web, Other (Dart consola)**
+- Verificar **compatibilidad con Null safety**
+- Leer las instrucciones de instalación, pegar el nombre del paquete y su versión en el archivo **pubspec.yaml** en el path de **dependencies**
+- Al guardar los cambios, automáticamente VSCode ejecutará el comando de Dart **dart pub get** para instalar esa dependencia
+```
+Versión alpha 0.0.x
+Versión beta 0.x.x
+Versión producción >= 1.x.x 
+```
+

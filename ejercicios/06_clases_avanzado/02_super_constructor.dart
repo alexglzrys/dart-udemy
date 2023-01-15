@@ -20,6 +20,14 @@ class Cliente extends Persona {
     this.ordenes = [];
   }
 
+  // * Sobre-escribir un método declarado en la clase padre
+  @override
+  void imprimirNombre() {
+    print('Cliente: $nombre, Dirección Fiscal: $direccion, Edad: $edad');
+    // Con super puedo invocar al método original
+    // super.imprimirNombre();
+  }
+
   void imprimirDireccionFiscal() => print('Direccion: $direccion');
 }
 

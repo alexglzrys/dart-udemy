@@ -1,10 +1,11 @@
 // 1. Core
 // Paquete para realizar conversiones - json a mapas, etc
-// import 'dart:convert';
+import 'dart:convert';
 
 // 2. Importar paquete de terceros
 // as es un alias (se importa todo el contenido de ese archivo bajo el nombre de http - http.algo)
 import 'package:http/http.dart' as http;
+import 'package:paquetes/clases/pais.dart';
 import 'package:paquetes/clases/reqres_respuesta.dart';
 
 void reqResService(Uri url) {
@@ -35,5 +36,28 @@ void reqResService(Uri url) {
 
     final respuestaMapa = respuesta.toMap();
     print('Respuesta a Mapa $respuestaMapa');
+  });
+}
+
+void getInfoPaisColombia() {
+  // Armar la Url
+  final url = Uri.parse('https://restcountries.com/v2/alpha/col');
+  // Realizar la petición HTTP
+  http.get(url).then((response) {
+    // Convertir el cuerpo de la respuesta a un objeto de Dart
+    final respuesta = Pais.fromJson(response.body);
+    // Mostrar información en pantalla
+    print('---- Desde RestCountries ----');
+    print('=' * 60);
+    print('Pais: ${utf8.decode(utf8.encode(respuesta.name))}');
+    print('Población: ${respuesta.population}');
+    print('Fronteras:');
+    respuesta.borders.forEach((frontera) => print(frontera.padLeft(6, ' ')));
+    print('Lenguajes: ${respuesta.languages[0].nativeName}');
+    print('Latitud: ${respuesta.latlng[0]}');
+    print('Lonfitud: ${respuesta.latlng[1]}');
+    print('Moneda: ${respuesta.currencies[0].name}');
+    print('Bandera ${respuesta.flag}');
+    print('=' * 60);
   });
 }

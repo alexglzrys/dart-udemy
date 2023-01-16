@@ -54,3 +54,5 @@ Esto en el mundo de Angular es equivalente a las Interfaces, que nos ayudan a cr
 - Pegar la respuesta arrojada por el servicio
 - Copiar el código de clase propuesto por el servicio
 - Crear una clase en Dart y pegar el código.
+- Realizar los ajustes (Renombrar referencia a clases) necesarios en la clase
+- Recomendado separar las clases generadas en archivos independientes.

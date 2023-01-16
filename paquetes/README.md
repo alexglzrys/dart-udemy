@@ -40,3 +40,17 @@ Versión beta 0.x.x
 Versión producción >= 1.x.x 
 ```
 
+## Mapear respuesta HTTP a una instancia de clase
+
+Para mejorar el trabajo con la información que viaja en la respuesta HTTP de cualquier servicio. Se sugiere mapear toda la respuesta en una instancia de clase en Dart.
+
+El objetivo es crear un mapa que sirva como interface para acceder de forma sencilla a cada uno de sus campos, sin temor a equivocarse en sus nombres.
+
+Esto en el mundo de Angular es equivalente a las Interfaces, que nos ayudan a crear un cascarón de como luce la información de un determinado objeto (respuesta http)
+
+- Ir al servicio en la nube: **https://quicktype.io/**
+- Abrir el app, o bien, abrir **https://app.quicktype.io/**
+- Seleccionar **Lenguaje Dart**
+- Pegar la respuesta arrojada por el servicio
+- Copiar el código de clase propuesto por el servicio
+- Crear una clase en Dart y pegar el código.
